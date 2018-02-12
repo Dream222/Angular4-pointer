@@ -1,0 +1,118 @@
+<left-menu></left-menu>
+<div id="index_contentarea" class="watching_likes col-md-9 col-sm-7 col-xs-12 margin-top-30 padding-bottom-200">
+
+    <div class="col-xs-12 col-md-12 padding-0">
+
+        <div *ngFor="let w of like" class="col-md-4 col-sm-6 col-xs-12 margin-bottom-40 sub_div_wrapper">
+
+            <div class="col-md-11 col-xs-12 padding-0 sub_div div-white-box-shadow div-white-box-shadow">
+
+                <div class="col-md-12 col-xs-12 sub_div_image" [style.backgroundImage]="backgroundImage(w.service.media.fileName)"></div>
+
+                <div class="col-md-12 col-xs-12 padding-top-10">
+                    <h4>{{w.service.description}}</h4>
+                    <p class="font-em-09 margin-bottom-5">
+                        ${{w.service.prices.price}}
+                        <span class="color-blue" style="text-decoration: line-through;">$100</span> for {{w.service.prices.time}} {{w.service.prices.timeUnitOfMeasure}}
+                    </p>
+                    <p class="font-em-09 color-mediumgray">
+                        <span class="glyphicon glyphicon-map-marker"></span> {{w.service.location[0].city}}, {{w.service.location[0].country}}, 22 km
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-md-12 sub_div_description">
+
+                    <div class="col-md-4 col-xs-4 padding-0 text-left">
+                        <img src="assets/images/p.png" alt="">
+                        <p class="color-mediumgray" style="font-size:12px;">{{w.pointValue}}</p>
+                    </div>
+
+                    <div class="col-md-4 col-xs-4 padding-0 text-center">
+                        <img src="assets/images/icons/brief2.png" style="vertical-align:text-bottom;" alt="">
+                        <p class="color-mediumgray" style="font-size:12px;">{{w.numOrders}}</p>
+                    </div>
+
+                    <div class="col-md-4 col-xs-4 padding-0 text-right">
+                        <i class="fa fa-star color-mediumgray"></i>
+                        <p class="color-mediumgray" style="font-size:12px;">{{w.avgRating}}%</p>
+                    </div>
+
+                </div>
+
+                <div id="service_detail_link" onclick="btn_menu_f(this)" class="cursor-pointer col-xs-12 col-md-12 padding-top-6 sub_div_footer" style="border-top:1px solid #e9e9e9;">
+
+                    <img src="assets/images/services/1.png" alt="img" style="border-radius:50%; width:24px; height:24px; margin-right:2px;">
+                    <p class="color-mediumgray font-em-09">{{w.user.firstName}} {{w.user.lastName}}</p>
+                    <p class="p2 color-blue font-weight-600 pull-right margin-top-4" style="font-size:12px;">Promoted</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="col-xs-12 col-md-12">
+        <h4 class="color-darkgray margin-bottom-25 margin-top-20">1 week ago</h4>
+    </div>
+
+
+
+    <div class="col-xs-12 col-md-12 padding-0">
+
+        <div *ngFor="let w of like" class="col-md-4 col-sm-6 col-xs-12 margin-bottom-40 sub_div_wrapper">
+
+            <div class="col-md-11 col-xs-12 padding-0 sub_div div-white-box-shadow div-white-box-shadow">
+
+                <div class="col-md-12 col-xs-12 sub_div_image" [style.backgroundImage]="backgroundImage(w.service.media.fileName)"></div>
+
+                <div class="col-md-12 col-xs-12 padding-top-10">
+                    <h4>{{w.service.description}}</h4>
+                    <p class="font-em-09 margin-bottom-5">
+                        ${{w.service.prices.price}}
+                        <span class="color-blue" style="text-decoration: line-through;">$100</span> for {{w.service.prices.time}} {{w.service.prices.timeUnitOfMeasure}}
+                    </p>
+                    <p class="font-em-09 color-mediumgray">
+                        <span class="glyphicon glyphicon-map-marker"></span> {{w.service.location[0].city}}, {{w.service.location[0].country}}, 22 km
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-md-12 sub_div_description">
+
+                    <div class="col-md-4 col-xs-4 padding-0 text-left">
+                        <img src="assets/images/p.png" alt="">
+                        <p class="color-mediumgray" style="font-size:12px;">{{w.pointValue}}</p>
+                    </div>
+
+                    <div class="col-md-4 col-xs-4 padding-0 text-center">
+                        <img src="assets/images/icons/brief2.png" style="vertical-align:text-bottom;" alt="">
+                        <p class="color-mediumgray" style="font-size:12px;">{{w.numOrders}}</p>
+                    </div>
+
+                    <div class="col-md-4 col-xs-4 padding-0 text-right">
+                        <i class="fa fa-star color-mediumgray"></i>
+                        <p class="color-mediumgray" style="font-size:12px;">{{w.avgRating}}%</p>
+                    </div>
+
+                </div>
+
+                <div id="service_detail_link" onclick="btn_menu_f(this)" class="cursor-pointer col-xs-12 col-md-12 padding-top-6 sub_div_footer" style="border-top:1px solid #e9e9e9;">
+
+                    <img src="assets/images/services/1.png" alt="img" style="border-radius:50%; width:24px; height:24px; margin-right:2px;">
+                    <p class="color-mediumgray font-em-09">{{w.user.firstName}} {{w.user.lastName}}</p>
+                    <p class="p2 color-blue font-weight-600 pull-right margin-top-4" style="font-size:12px;">Promoted</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>

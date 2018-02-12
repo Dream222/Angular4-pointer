@@ -1,0 +1,65 @@
+<div id="index_main" class="col-xs-12 col-md-12 padding-0 padding-bottom-60" style="background-color:rgb(249,249,249)">
+    <left-menu></left-menu>
+
+    <!-- index_sidepanel-->
+
+    <div id="index_contentarea" class="col-md-9 col-sm-7 col-xs-12 margin-top-30 padding-bottom-200">
+
+        <div id="buy_sell" class="col-xs-12 col-md-7 padding-0">
+
+            <div *ngFor="let item of sellers" class="col-md-12 col-sm-12 sub_div col-xs-12 div-white-box-shadow margin-bottom-30 padding-0 ">
+
+                <div class="col-md-12 col-xs-12 padding-30 padding-bottom-15" style="border-bottom:1px solid #e4e4e4;">
+
+                    <div class="col-md-3 col-xs-3 sub_div_image">
+                        <img src="{{item.seller.profilePic}}" alt="" width="110px" height="110px">
+                    </div>
+
+                    <div class="col-md-9 col-xs-9 padding-right-0">
+                        <h4 class="margin-top-0 color-text-black font-weight-600">{{item.service.description}}</h4>
+                        <p class="font-em-09 margin-bottom-5">
+                            $50
+                            <span class="color-blue" style="text-decoration: line-through;">$100</span> for 1 hour
+                        </p>
+                        <p class="font-em-09 color-mediumgray margin-bottom-5">
+                            <span class="glyphicon glyphicon-map-marker"></span> {{item.order.serviceLocation.city}}, {{item.order.serviceLocation.country}}, 22 km
+                        </p>
+
+                        <p class="font-em-09 color-mediumgray margin-bottom-5">
+                            By {{item.seller.firstName}} {{item.seller.lastName}}
+                        </p>
+
+                        <p class="font-em-09 color-mediumgray margin-bottom-5">
+                            Paid on {{item.order.orderMilestoneStatuses.paidDate | date}}
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12 col-md-12 sub_div_description padding-15 padding-left-30" style="background-color:#F6F7F9;">
+
+                    <div class="sub_div_footer col-md-4 col-sm-4 col-xs-5 padding-0">
+                        <h4 class="color-gray display-inlineBlock">Pending Delivery</h4>
+                    </div>
+
+                    <div class="col-md-8 col-sm-8 col-xs-7 padding-top-10">
+                        <div class="li_circle"></div>
+                        <div class="li_circle"></div>
+                        <div class="li_circle"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+</div>

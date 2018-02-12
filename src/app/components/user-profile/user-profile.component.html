@@ -1,0 +1,408 @@
+<div id="index_main" class="col-xs-12 col-md-12 padding-0 padding-bottom-60" style="background-color:rgb(249,249,249)">
+
+    <div id="index_sidepanel" class="col-md-3 col-sm-5 col-xs-12 padding-left-60 margin-top-30">
+
+
+        <div class="col-xs-12 col-md-12 padding-0 text-center color-bg-white div-white-box-shadow padding-top-40">
+
+            <div style="position:relative;" class="text-center">
+                <img src="{{user.profilePic}}" alt="" style="margin-left:auto; margin-right:auto;" width="120px" height="120px">
+                <img src="assets/images/icons/online@2x.png" style="position:absolute; bottom:-8px; right:46%;" width="18px" height="18px" alt="">
+            </div>
+
+            <h3 class="color-text-black font-weight-600 padding-bottom-15 text-center">{{user.firstName}} {{user.lastName}}</h3>
+
+            <li id="li_follow" onclick="btn_menu_f(this);" class="display-inlineBlock">
+                <a data-toggle="modal" data-target="#" class="btn_menu_active padding-7 padding-right-30 padding-left-30 color-gray font-weight-600 margin-right-10" style="border-color:#95989A !important;">Follow</a>
+            </li>
+
+            <li id="li_message_user" onclick="btn_menu_f(this);" class="display-inlineBlock">
+                <a data-toggle="modal" data-target="#" class="btn_menu_active padding-7 padding-right-30 padding-left-30 color-gray font-weight-600" style="border-color:#95989A !important;">
+                    <img src="assets/images/icons/envelope.png" class="margin-right-3" width="16px" height="12px" alt=""> Message
+                </a>
+            </li>
+
+
+            <div class="col-xs-12 col-md-12 padding-0 margin-top-40 padding-bottom-20">
+
+                <div class="col-xs-12 col-md-12 padding-right-5 padding-left-5">
+
+                    <div class="col-xs-5 col-md-6 padding-right-0 text-left">
+                        <div class="col-md-2 padding-0"><i class="fa fa-briefcase color-gray"></i></div>
+                        <div class="col-md-10 padding-0">
+                            <p class="font-em-09 display-inlineBlock color-darkgray">Company</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-7 col-md-6 padding-left-0 text-right">
+                        <p class="font-em-09 color-gray">{{user.companyName}}</p>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12 col-md-12 padding-right-5 padding-left-5">
+
+                    <div class="col-xs-5 col-md-6 padding-right-0 text-left">
+                        <div class="col-md-2 padding-0"><span class="width-20-px"><i class="fa fa-map-marker color-gray"></i></span></div>
+                        <div class="col-md-10 padding-0">
+                            <p class="font-em-09 display-inlineBlock color-darkgray">Location</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-7 col-md-6 padding-left-0 text-right">
+                        <p class="font-em-09 color-gray">{{user.location.city}}, {{user.location.country}}, 22 km</p>
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12 col-md-12 padding-right-5 padding-left-5">
+
+                    <div class="col-xs-5 col-md-6 padding-right-0 text-left">
+                        <div class="col-md-2 padding-0"><i class="fa fa-phone color-gray"></i></div>
+                        <div class="col-md-10 padding-0">
+                            <p class="font-em-09 display-inlineBlock color-darkgray">Phone</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-7 col-md-6 padding-left-0 text-right">
+                        <p class="font-em-09 color-gray">{{user.phone}}</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!--------------------------------------------------- Description ------------------------------------------------------------------------>
+
+
+
+            <div class="col-xs-12 col-md-12 padding-left-20 padding-top-20 padding-bottom-20" style="border-top:1px solid #ccc;">
+
+                <h4 class="color-darkgray text-left">Description</h4>
+
+                <p class="text-left margin-top-20" style="line-height:23px;">{{user.description}}</p>
+
+            </div>
+
+
+
+            <!--------------------------------------------------- Service Metrics ---------------------------------------------------------------->
+
+
+
+            <div class="col-xs-12 col-md-12 padding-left-20 padding-top-20 padding-bottom-20" style="border-top:1px solid #ccc;">
+
+                <h4 class="color-darkgray text-center">Service Metrics</h4>
+
+                <div class="col-xs-12 col-md-12 padding-0 padding-top-20">
+
+                    <div class="col-xs-4 col-md-4 padding-right-0">
+
+                        <div class="col-xs-12 col-md-12 padding-0">
+                            <div class="border-radius-50p pull-left" style="border:1px solid #95989A; width:44px; height:44px;">
+                                <p class="color-darkgray padding-top-13 font-px-12 text-center">99%</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-12 padding-0 margin-top-5">
+                            <p class="color-darkgray font-px-12 text-left">On time</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-4 col-md-4 padding-0">
+
+                        <div class="col-xs-12 col-md-12 padding-0">
+                            <div class="border-radius-50p margin-left-right-auto" style="border:1px solid #95989A; width:44px; height:44px;">
+                                <p class="color-darkgray padding-top-13 font-px-12 text-center">4.5/5</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-12 padding-0 margin-top-5">
+                            <p class="color-darkgray font-px-12 text-center">Quality</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-4 col-md-4 padding-0">
+
+                        <div class="col-xs-12 col-md-12 padding-left-0">
+                            <div class="border-radius-50p pull-right" style="border:1px solid #95989A; width:44px; height:44px;">
+                                <p class="color-darkgray padding-top-13 font-px-12 text-center">1.2hr</p>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-12 padding-0 margin-top-5">
+                            <p class="color-darkgray font-px-12 text-center">Avg. response <br/> time</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12 col-md-12 padding-0 padding-top-10">
+
+                    <div class="col-xs-12 col-md-12 padding-0">
+
+                        <div class="col-md-1 col-xs-2 padding-0">
+                            <i class="fa fa-briefcase color-mediumgray font-px-16 margin-top-3"></i>
+                        </div>
+
+                        <div class="col-md-10 col-xs-10 padding-right-0">
+                            <p class="color-gray text-left">
+                                <span class="color-darkgray">56</span> service order completed
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xs-12 col-md-12 padding-0 margin-top-10">
+
+                        <div class="col-md-1 col-xs-2 padding-0">
+                            <i class="fa fa-star color-mediumgray font-px-16 margin-top-3"></i>
+                        </div>
+
+                        <div class="col-md-10 col-xs-10 padding-right-0">
+                            <p class="color-gray text-left">
+                                <span class="color-darkgray">95%</span> avg rating
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xs-12 col-md-12 padding-0 margin-top-10">
+
+                        <div class="col-md-1 col-xs-2 padding-0">
+                            <i class="fa fa-users color-mediumgray font-px-16 margin-top-3"></i>
+                        </div>
+
+                        <div class="col-md-10 col-xs-10 padding-right-0">
+                            <p class="color-gray text-left">
+                                <span class="color-darkgray">90%</span> of customers will buy this service again
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!--------------------------------------------------- Service Details ---------------------------------------------------------------->
+
+
+
+            <div class="col-xs-12 col-md-12 padding-top-20 padding-bottom-40" style="border-top:1px solid #ccc;">
+
+                <h4 class="color-darkgray text-center">Service Details</h4>
+
+                <div class="col-xs-4 col-md-4 padding-0 margin-top-10">
+
+                    <div class="col-md-6 col-xs-6 padding-0">
+                        <div class="border-radius-50p margin-left-right-auto padding-top-5 margin-top-2" style="border:1px solid #95989A; width:32px; height:32px;">
+                            <img src="assets/images/p.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xs-6 padding-0 padding-left-2">
+                        <p class="color-gray text-left color-darkgray margin-0">234</p>
+                        <p class="color-gray text-left color-darkgray margin-0 font-em-07">Points</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-4 col-md-4 padding-0 margin-top-10">
+
+                    <div class="col-md-6 col-xs-6 padding-0">
+                        <div class="border-radius-50p margin-left-right-auto padding-top-5 margin-top-2" style="border:1px solid #95989A; width:32px; height:32px;">
+                            <i class="fa fa-heart-o color-gray"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xs-6 padding-0 padding-left-2">
+                        <p class="color-gray text-left color-darkgray margin-0">234</p>
+                        <p class="color-gray text-left color-darkgray margin-0 font-em-07">Likes</p>
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-4 col-md-4 padding-0 margin-top-10">
+
+                    <div class="col-md-6 col-xs-6 padding-0">
+                        <div class="border-radius-50p margin-left-right-auto padding-top-5 margin-top-2" style="border:1px solid #95989A; width:32px; height:32px;">
+                            <i class="fa fa-eye color-gray"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-xs-6 padding-0 padding-left-2">
+                        <p class="color-gray text-left color-darkgray margin-0">234</p>
+                        <p class="color-gray text-left color-darkgray margin-0 font-em-07">Watching</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div id="index_contentarea" class="col-md-9 col-sm-7 col-xs-11 margin-top-30">
+
+        <div id="modal_sendCustomOffer" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content text-center padding-0 width-700-px margin-left-right-auto color-bg-white">
+
+                    <div class="col-xs-12 col-md-12 padding-50 padding-bottom-30 color-bg-white">
+
+                        <div class="col-xs-12 col-md-12">
+                            <h3 class="color-darkgray text-left font-weight-600 font-em-14">Get a Custom Offer from Daisy</h3>
+                            <select name="" class="form-control" id="">
+                        <option value="">Choose a Service Category</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                        </div>
+
+
+                        <div class="col-xs-12 col-md-12 margin-top-40">
+                            <h3 class="color-darkgray text-left font-weight-600 font-em-14">Describe the ervice you're looking</h3>
+                            <textarea name="" id="" class="color-gray form-control" rows="6" placeholder="Describe your service details (500)"></textarea>
+                        </div>
+
+
+                        <div class="col-xs-12 col-md-12 margin-top-40">
+                            <h3 class="color-darkgray text-left font-weight-600 font-em-14">Where!</h3>
+                            <input type="text" class="color-gray form-control" value="Chicago">
+                            <span style="position:absolute; right:30px; top:58px;"><i class="fa fa-bullseye font-px-16"></i></span>
+                        </div>
+
+
+                        <div class="col-xs-12 col-md-12 margin-top-40">
+                            <h3 class="color-darkgray text-left font-weight-600 font-em-14">Your Custom Offer</h3>
+                            <input type="text" class="color-text-black font-weight-600 form-control" value="$60">
+                        </div>
+
+
+                        <div class="col-xs-12 col-md-12 margin-top-40">
+                            <h3 class="color-darkgray text-left font-weight-600 font-em-14">Write message</h3>
+                            <textarea name="" id="" class="color-gray form-control" rows="6" placeholder="Write your special request to Daisy (500)"></textarea>
+                        </div>
+
+
+                        <div class="col-xs-12 col-md-12 margin-top-40 margin-bottom-60">
+
+                            <li id="li_addService" onclick="" class="display-inlineBlock pull-right">
+                                <a class="text-uppercase margin-top-40 bg-blue color-text-white font-px-16 font-weight-600 padding-10 padding-left-20 padding-right-20" style="border-radius:20px;">Send</a>
+                            </li>
+
+                            <li onclick="toggle_modal('modal_sendCustomOffer');" id="li_cancel" class="display-inlineBlock pull-right margin-right-20">
+                                <a class="margin-top-40 font-px-16 font-weight-600 color-darkgray text-uppercase padding-10">Cancel</a>
+                            </li>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!---------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+        <div class="col-xs-12 col-md-12 padding-right-40" id="banner_area">
+            <div class="col-md-12 col-xs-12 padding-0" [style.backgroundImage]="backgroundImage(user.profileBackgroundMedia[0].fileName)" style="background-repeat:no-repeat; background-size:cover; background-position:center; height:230px; border-radius:3px;"></div>
+        </div>
+
+
+        <div class="user_services col-xs-12 col-md-12 padding-0" id="content_area">
+
+            <div class="col-xs-12 col-md-12 margin-bottom-15 margin-top-30">
+
+                <h4 class="color-text-black text-left font-weight-600 display-inlineBlock" style="vertical-align:-webkit-baseline-middle;">{{user.firstName}}'s Services</h4>
+
+                <input type="submit" class="pull-right btn btn-default color-blue color-bg-white font-weight-600 padding-left-30 padding-right-30 margin-right-30" style="border-radius:20px; border-color:#00B4F1;" value="Get Custom Offer" data-toggle="modal" data-target="#modal_sendCustomOffer"
+                    data-dismiss="modal">
+
+
+            </div>
+
+            <div *ngFor="let item of _userServices" class="col-md-4 col-sm-6 col-xs-6 margin-bottom-40 sub_div_wrapper">
+
+                <div class="col-md-11 col-xs-11 padding-0 sub_div div-white-box-shadow div-white-box-shadow">
+
+                    <div class="col-md-12 col-xs-12 sub_div_image" [style.backgroundImage]="backgroundImage(item.service.media.fileName)"></div>
+
+                    <div class="col-md-12 col-xs-12 padding-top-10">
+                        <h4>{{item.service.description}}</h4>
+                        <p class="font-em-09 margin-bottom-5">
+                            ${{item.service.prices.price}}
+                            <span class="color-blue" style="text-decoration: line-through;">$100</span> for {{item.service.prices.time}} {{item.service.prices.timeUnitOfMeasure}}
+                        </p>
+                        <p class="font-em-09 color-mediumgray">
+                            <span class="glyphicon glyphicon-map-marker"></span> {{item.service.location[0].city}}, {{item.service.location[0].country}}, 22 km
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12 col-md-12 sub_div_description">
+
+                        <div class="col-md-4 col-xs-4 padding-0 text-left">
+                            <img src="assets/images/p.png" alt="">
+                            <p class="color-mediumgray" style="font-size:12px;">{{item.pointValue}}</p>
+                        </div>
+
+                        <div class="col-md-4 col-xs-4 padding-0 text-center">
+                            <img src="assets/images/icons/brief2.png" style="vertical-align:text-bottom;" alt="">
+                            <p class="color-mediumgray" style="font-size:12px;">{{item.numOrders}}</p>
+                        </div>
+
+                        <div class="col-md-4 col-xs-4 padding-0 text-right">
+                            <i class="fa fa-star color-mediumgray"></i>
+                            <p class="color-mediumgray" style="font-size:12px;">{{item.avgRating}}%</p>
+                        </div>
+
+                    </div>
+
+                    <div id="service_detail_link" onclick="btn_menu_f(this)" class="cursor-pointer col-xs-12 col-md-12 padding-top-6 sub_div_footer" style="border-top:1px solid #e9e9e9;">
+
+                        <img src="assets/images/services/1.png" alt="img" style="border-radius:50%; width:24px; height:24px; margin-right:2px;">
+                        <p class="color-mediumgray font-em-09">{{user.firstName}} {{user.lastName}}</p>
+                        <p class="p2 color-blue font-weight-600 pull-right margin-top-4" style="font-size:12px;">Promoted</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

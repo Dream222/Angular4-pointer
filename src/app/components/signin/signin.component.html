@@ -1,0 +1,28 @@
+<div #myModal id="modal_signin" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content text-center padding-0 width-500-px margin-left-right-auto color-bg-white">
+            <form class="col-xs-12 col-md-12 padding-50 padding-bottom-30 color-bg-white" [formGroup]="form">
+                <a href="index.html"><img src="assets/images/logo.png" class="margin-bottom-40" alt=""></a>
+                <input type="email" formControlName="email" class="font-weight-600 form-control color-darkgray margin-bottom-10 height-40-px boxshadow-none width-400-px" style="border:1px solid #e9e9e9;" placeholder="Email">
+                <input type="password" formControlName="password" class="font-weight-600 form-control color-darkgray margin-bottom-10 height-40-px boxshadow-none width-400-px" style="border:1px solid #e9e9e9;" placeholder="Password">
+                <button data-dismiss="modal" (click)="onClickSignin(form.get('email').value, form.get('password').value)" type="submit" class="form-control bg-blue color-text-white font-weight-600 font-px-16 height-40-px padding-top-7 border-none width-400-px" [disabled]="loading || !form.valid">Sign In</button>
+                <p class="margin-top-20 margin-bottom-20 font-weight-600">OR</p>
+                <button (click)="onClickSigninWithFB();" class="padding-top-12 padding-bottom-12 color-text-white font-weight-600 font-px-15" style="padding-right:110px; padding-left:115px; position:relative; background-color: #475993; border-radius: 2px; outline: none; border: none; width: 100%;">
+          <i class="fa fa-facebook-square color-text-white fa-2x" style="position:absolute; left: 15px; top:8px;"></i>
+          <p class="display-inlineBlock margin-0">Continue with Facebook</p>
+        </button>
+                <br>
+                <br>
+                <button (click)="onClickSigninWithGoogle();" class="padding-top-12 padding-bottom-12 color-text-white font-weight-600 font-px-15" style="padding-right:110px; padding-left:135px; position:relative; border:1px solid #e4e4e4; border-radius: 2px; outline: none; width: 100%; background-color: #fff;">
+          <img src="assets/images/icons/google1.png" style="width:24px; height:24px; position:absolute; left: 15px; top:10px;" alt="">
+          <p class="display-inlineBlock color-text-black margin-0">Continue with Google</p>
+        </button>
+                <p style="cursor:pointer;" data-toggle="modal" data-target="#modal_forgotpassword" data-dismiss="modal" class="padding-top-30">Forgot your Password?</p>
+            </form>
+            <div class="col-xs-12 col-md-12 padding-0 color-bg-white padding-top-15 padding-bottom-15" style="border-top: 1px solid #e9e9e9;">
+                <p style="cursor:pointer;" data-toggle="modal" data-target="#modal_signup" data-dismiss="modal" class="color-gray margin-top-5">Not a member yet? <span class="color-blue cursor-pointer">Sign up</span></p>
+            </div>
+        </div>
+    </div>
+</div>
